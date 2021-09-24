@@ -1,10 +1,10 @@
 RemoteEvent = script.Parent:WaitForChild("Haki")
 local objColors = {}
 
-RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent has been fireservered
+RemoteEvent.OnServerEvent:Connect(function(Plr, Value) 
 
-	if Value == "on" then -- if the fireserver wants us to create a birdcage (first argument) then
-		spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+	if Value == "on" then 
+		spawn(function() 
 			local TweenService = game:GetService("TweenService")
 			local Info = TweenInfo.new(
 				.9, -- Length
@@ -28,7 +28,7 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 					peee = v.Handle.content:Clone()
 					peee.Parent = v.Handle
 					peee.Name = "pee"
-					game.Debris:AddItem(peee, 2.3) -- we destroy it after 1 second
+					game.Debris:AddItem(peee, 2.3) -- destroy it after 1 second
 					for i, pee in
 						pairs(peee:GetChildren()) do
 						spawn(function()
@@ -57,7 +57,7 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 							for i = 1, 10 do -- we loop through the code 10x
 								wait(.05) -- we wait
 								pee.Transparency = pee.Transparency - 0.1
-								-- we reduce the transparency by 0.1 (means when u do it 10 times that it'll fully turn visible)
+								
 							end
 
 
@@ -75,7 +75,7 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 					end
 			end
 		end)
-		spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+		spawn(function() -- this code is ran by itself
 			local TweenService = game:GetService("TweenService")
 			local Info = TweenInfo.new(
 				.9, -- Length
@@ -101,7 +101,7 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 					peee = tool.Handle.content:Clone()
 					peee.Parent = tool.Handle
 					peee.Name = "pee"
-					game.Debris:AddItem(peee, 2.3) -- we destroy it after 1 second
+					game.Debris:AddItem(peee, 2.3) -- destroys
 
 
 				for i, pee in
@@ -132,7 +132,6 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 							for i = 1, 10 do -- we loop through the code 10x
 								wait(.05) -- we wait
 								pee.Transparency = pee.Transparency - 0.1
-								-- we reduce the transparency by 0.1 (means when u do it 10 times that it'll fully turn visible)
 										end
 
 									end
@@ -219,7 +218,7 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 		P2.Part1 = Plr.Character:FindFirstChild("Left Arm")
 		P2.C0 = effectpart2.CFrame:inverse() * Plr.Character:FindFirstChild("Left Arm").CFrame * CFrame.new(0, .45, 0)
 		P2.Parent = effectpart2
-		spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+		spawn(function() 
 
 		effectpart.Effect.Enabled = true
 		effectpart2.Effect.Enabled = true
@@ -232,10 +231,10 @@ RemoteEvent.OnServerEvent:Connect(function(Plr, Value) -- once the remotevent ha
 		effectpart.Effect1.Enabled = false
 		effectpart2.Effect1.Enabled = false
 end)
-		game.Debris:AddItem(effectpart, 2.3) -- we destroy it after 1 second
-		game.Debris:AddItem(effectpart2, 2.3) -- we destroy it after 1 second
+		game.Debris:AddItem(effectpart, 2.3) 
+		game.Debris:AddItem(effectpart2, 2.3) 
 		
-	spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+	spawn(function()
 		effectpart.Material = "ForceField"
 		effectpart.BrickColor = BrickColor.new("Magenta")
 		effectpart2.Material = "ForceField"
@@ -303,7 +302,7 @@ Part2:Destroy()
     W2.Parent = HK2
 
 
-		elseif Value == "off" then -- if the fireserver wants us to create a birdcage (first argument) then
+		elseif Value == "off" then 
 		toolAddedConnection:Disconnect()
 	Haki:Destroy()
 	for i = 1,10 do
@@ -313,7 +312,7 @@ Part2:Destroy()
 
 
 		end
-		spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+		spawn(function() 
 
 		for i, v in pairs(Plr.Character:GetChildren()) do
 			if v:IsA("Tool") then
@@ -323,10 +322,9 @@ Part2:Destroy()
 					spawn(function()
 
 						if pee:IsA('MeshPart') then
-							for i = 1, 10 do -- we loop through the code 10x
-								wait(.05) -- we wait
+							for i = 1, 10 do 
+								wait(.05) 
 								pee.Transparency = pee.Transparency + 0.1
-								-- we reduce the transparency by 0.1 (means when u do it 10 times that it'll fully turn visible)
 							end							
 						end
 
@@ -343,7 +341,7 @@ Part2:Destroy()
 				end
 				end
 				end)
-			spawn(function() -- the code inside will be ran apart from the rest and wont interrupt
+			spawn(function()
 
 for i, v in pairs(script.Parent.Parent:GetChildren()) do
 				if v:IsA("Tool") then
